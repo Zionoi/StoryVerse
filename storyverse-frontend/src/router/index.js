@@ -4,6 +4,7 @@ import Profile from '../views/Profile.vue'
 import PostDetail from '../views/PostDetail.vue'
 import CreatePost from '../views/CreatePost.vue'
 import UserBlog from '../views/UserBlog.vue'
+import TestCom from '@/views/testCom.vue'
 
 const routes = [
     {
@@ -33,6 +34,11 @@ const routes = [
         name: 'UserBlog',
         component: UserBlog,
         props: true  // URL의 userId를 컴포넌트 props로 전달
+    },
+    {
+        path: '/test',
+        name: 'testCom',
+        component: TestCom,
     }
 
 ]

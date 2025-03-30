@@ -11,6 +11,9 @@
         <button @click="viewMode = 'list'">📋 목록형 보기</button>
         <button @click="viewMode = 'card'">🟦 카드형 보기</button>
       </div>
+      <div>
+        <button @click="goToTestCom">테스트 뷰로 가기</button>
+      </div>
   
       <!-- 게시글이 없을 때 -->
       <p v-if="posts.length === 0">게시글이 없습니다.</p>
@@ -77,6 +80,9 @@
     },
     goToDetail(postId) {
         this.$router.push(`/post/${postId}`)
+    },
+    goToTestCom(){
+      this.$router.push('/test')
     }
   }
   }

@@ -29,9 +29,15 @@ export default {
 
         };
     },
+    created() {
+    // 최초 마운트 시 sessionStorage에서 count 불러오기
+    const savedCount = sessionStorage.getItem("ClickCount");
+    this.count = savedCount ? parseInt(savedCount) : 0;
+  },
     methods: {
         increment() {
             this.count++;
+            sessionStorage.setItem("ClickCount", this.count);
         }
 
     }

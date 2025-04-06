@@ -4,8 +4,8 @@
 
     <div v-if="post">
       <h2>{{ post.title }}</h2>
-      <p>{{ post.content }}</p>
-      <small>{{ post.date }}</small>
+      <p>{{ post.postContent }}</p>
+      <small>{{ post.postDate }}</small>
     </div>
     <p v-else>게시글을 찾을 수 없습니다.</p>
   </div>

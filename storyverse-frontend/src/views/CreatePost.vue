@@ -6,7 +6,7 @@
       <input v-model="title" required />
 
       <label>내용:</label>
-      <textarea v-model="content" required></textarea>
+      <textarea v-model="postContent" required></textarea>
 
       <label>공개 여부:</label>
       <input type="checkbox" v-model="isOpen" />
@@ -24,10 +24,8 @@ export default {
   data() {
     return {
       title: '',
-      content: '',
-      userId: 'kimyohan', // 로그인 기능 붙으면 교체 예정
-      isOpen: true,
-      date: new Date().toISOString().slice(0, 10) // 오늘 날짜 (YYYY-MM-DD)
+      postContent: '',
+      isOpen: true
     }
   },
   methods: {
@@ -35,12 +33,10 @@ export default {
       try {
         const post = {
           title: this.title,
-          content: this.content,
-          userId: this.userId,
-          isOpen: this.isOpen,
-          date: this.date
+          postContent: this.postContent,
+          isOpen: this.isOpen
         }
-        await api.post('/posts', post)
+        await api.post('/posts', post, { withCredentials: true }) // ✅ 쿠키 포함 필수
         alert('작성 완료!')
         this.$router.push('/')
       } catch (err) {

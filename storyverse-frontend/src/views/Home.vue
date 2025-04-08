@@ -10,7 +10,6 @@
         <button @click="logout" class="btn">로그아웃</button>
       </template>
     </div>
-
     <h1>여러 이야기가 모여 펼쳐지는 당신만의 우주</h1>
 
     <!-- 로그인 시에만 글쓰기 버튼 보이게 -->

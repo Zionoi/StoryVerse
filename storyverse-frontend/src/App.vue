@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" src="./assets/storyverseLogo.svg">
   <div id="app">
     <router-view name="header" />
     <router-view /> <!-- default view -->
